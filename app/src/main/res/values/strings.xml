@@ -3,4 +3,11 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--Splash Activity-->
+    <string name="link_tokopedia">Visit us at : www.tokopedia/roboElectric</string>
+    <string name="continue_to_app">Continue to App</string>
+
+    <!--HomeActivity-->
+    <string name="menu_title">Select your tool below : </string>
 </resources>
