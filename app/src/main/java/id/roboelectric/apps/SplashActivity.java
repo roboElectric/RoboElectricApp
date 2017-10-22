@@ -1,6 +1,7 @@
 package id.roboelectric.apps;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +21,14 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void openTokopedia(View v){
-        Intent i = getPackageManager().getLaunchIntentForPackage("com.tokopedia.tkpd");
-        if (i != null){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://www.tokopedia.com/roboElectric"));
+
+        //Find tokopedia app
+        if (getPackageManager().getLaunchIntentForPackage("com.tokopedia.tkpd") != null) {
+            i.setPackage("com.tokopedia.tkpd");
+            startActivity(i);
+        } else {
             startActivity(i);
         }
     }
